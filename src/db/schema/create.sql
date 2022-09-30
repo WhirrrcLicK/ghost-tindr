@@ -19,10 +19,11 @@ CREATE TABLE bios CASCADE (
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(255) NOT NULL,
   age INTEGER,
-  bio_image_id INTEGER,
+  bio_image_id INTEGER REFERENCES bio_images(id),
   location VARCHAR(255) NOT NULL,
-  ghost_id INTEGER,
-  user_id INTEGER,
+  ghost_id INTEGER REFERENCES ghost_types(id),
+  looking_for INTEGER REFERENCES interested_in(id)
+  user_id INTEGER REFERENCES users(id),
   bio TEXT
 );
 
@@ -35,27 +36,29 @@ CREATE TABLE bio_images CASCADE (
 
 CREATE TABLE swipes CASCADE (
   id SERIAL PRIMARY KEY NOT NULL,
-  user_swiped INTEGER,
-  user_swiped_on INTEGER,
+  user_swiped INTEGER REFERENCES users(id),
+  user_swiped_on INTEGER REFERENCES bios(user_id),
   is_swiped BOOLEAN NOT NULL DEFAULT FALSE,
   is_matched BOOLEAN NOT NULL DEFAULT FALSE
 );
 
 CREATE TABLE conversations CASCADE (
   id SERIAL PRIMARY KEY NOT NULL,
-  user_id INTEGER
+  user_id INTEGER REFERENCES users(id)
 );
 
 CREATE TABLE participants CASCADE (
   id SERIAL PRIMARY KEY NOT NULL,
-  conversation_id INTEGER,
-  user_id INTEGER
+  conversation_id INTEGER REFERENCES conversations(id),
+  user1_id INTEGER REFERENCES users(id)
+  user2_id INTEGER REFERENCES swipes(user_swiped_on),
 );
 
 CREATE TABLE messages CASCADE (
   id SERIAL PRIMARY KEY NOT NULL,
   message TEXT,
-  participant_id INTEGER,
+  participant1_id INTEGER REFERENCES participants(user1_id),
+  participant2_id INTEGER REFERENCES participants(user2_id),
   timestamp DATETIME
 );
 
@@ -66,12 +69,12 @@ CREATE TABLE ghost_types CASCADE (
 
 CREATE TABLE interested_types CASCADE (
   id SERIAL PRIMARY KEY NOT NULL,
-  ghost_type_id INTEGER,
-  user_id INTEGER
+  ghost_type_id INTEGER REFERENCES ghost_types(id),
+  user_id INTEGER REFERENCES users(id)
 );
 
 CREATE TABLE block_users CASCADE (
   id SERIAL PRIMARY KEY NOT NULL,
-  user_id INTEGER,
-  blocked_user_id INTEGER
+  user_id INTEGER REFERENCES users(id),
+  blocked_user_id INTEGER REFERENCES bios(user_id)
 );
