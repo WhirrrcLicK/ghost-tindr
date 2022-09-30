@@ -1,0 +1,10 @@
+INSERT INTO users (email, password) VALUES ('kaiya@gmail.com', '123');
+INSERT INTO users (email, password) VALUES ('john@gmail.com', '123');
+INSERT INTO users (email, password) VALUES ('jason@gmail.com', '123');
+INSERT INTO users (email, password) VALUES ('sylvie@gmail.com', '123');
+INSERT INTO users (email, password) VALUES ('alex@gmail.com', '123');
+INSERT INTO users (email, password) VALUES ('chelsea@gmail.com', '123');
+INSERT INTO users (email, password) VALUES ('hind@gmail.com', '123');
+INSERT INTO users (email, password) VALUES ('mustafa@gmail.com', '123');
+INSERT INTO users (email, password) VALUES ('ryan@gmail.com', '123');
+INSERT INTO users (email, password) VALUES ('shane@gmail.com', '123');
