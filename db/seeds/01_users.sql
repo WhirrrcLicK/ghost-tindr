@@ -1,3 +1,0 @@
-INSERT INTO users (name, img_url) VALUES ('Kaiya', 'https://cliparting.com/wp-content/uploads/2016/05/Smiley-face-emotions-clip-art-cute-flower-smiley-simple.jpg');
-INSERT INTO users (name, img_url) VALUES ('John', 'https://upload.wikimedia.org/wikipedia/commons/e/ec/Happy_smiley_face.png');
-INSERT INTO users (name, img_url) VALUES ('Jason', 'https://images.unsplash.com/photo-1526297003708-f5a1c2c9c6e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
