@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.scss'
+import './styles.scss';
 // import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { Link, useHistory } from "react-router-dom";
 import PersonIcon from "@mui/icons-material/Person";

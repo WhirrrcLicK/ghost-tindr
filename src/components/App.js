@@ -1,10 +1,11 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
+import Header from "./Ghost-Tindr/Header"
 
 function App() {
   return (
     <div className="App">
-        <h1>Kaiya's the best!</h1>
+      <Header />
     </div>
   );
 }
