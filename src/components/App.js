@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import Header from "./components/Header"
+import './App.scss';
+import Header from "./Ghost-Tindr/Header"
 
 function App() {
   return (
