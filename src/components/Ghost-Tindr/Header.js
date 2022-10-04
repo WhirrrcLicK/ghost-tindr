@@ -12,17 +12,12 @@ import IconButton from "@mui/material/IconButton";
 export default function Header() {
   return (
     <div className="header">
-      <IconButton>
-        <PersonIcon className="header__icon" fontSize="large" />
-      </IconButton>
       <img
         className="header__logo"
         src="https://i.redd.it/jb1hfi766rb61.png"
         alt="ghost_logo"
       />
-      <IconButton>
-        <QuestionAnswerIcon className="header__icon" fontSize="large" />
-      </IconButton>
+        <p className="title">Relic</p>
     </div>
   );
 }

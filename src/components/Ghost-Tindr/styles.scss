@@ -1,15 +1,74 @@
+.tindr {
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   border-bottom: 1px solid #f9f9f9;
+}
+
+.title {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 75px;
 }
 
 .header__logo {
   height: 40px;
   object-fit: contain;
+  padding: 10px;
 }
 
-.header__icon {
-  padding: 20px;
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f9f9f9;
+  margin-top: auto;
+}
+
+.footer__icon {
+  padding: 10px;
+  height: 40px;
 } 
+
+.back_button {
+  display:flex;
+  align-self:start;
+}
+
+.viewprofile {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.user_profile {
+  display:flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 100%;
+}
+
+.user_img {
+  display:flex;
+  height: 300px;
+  background-color:bisque;
+}
+
+.user_info {
+  display:flex;
+  height: 30%;
+  background-color:tomato;
+}
+
+.swipe_buttons {
+  display:flex;
+  height: 30%;
+  background-color:aquamarine;
+}

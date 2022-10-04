@@ -15,6 +15,10 @@ import ViewProfile from './ViewProfile'
 export default function Tinder(props) {
 
   return (
-    <> </>
+    <container className="tindr">
+    <Header />
+    <ViewProfile />
+    <Footer />
+    </container>
   );
 }
