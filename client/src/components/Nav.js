@@ -1,6 +1,6 @@
 import React from "react";
 
-const Nav = ({ minimal, setShowModal, showModal, setIsSignUp }) => {
+export default function Nav({ minimal, setShowModal, showModal, setIsSignUp }) {
   const handleClick = () => {
     setShowModal(true);
     setIsSignUp(false);
@@ -8,24 +8,18 @@ const Nav = ({ minimal, setShowModal, showModal, setIsSignUp }) => {
 
   const authToken = false;
   return (
-    <nav>
-      <div className="logo-container">
-        <img
-          className="logo"
-          src="https://www.alittlenudge.com/wp-content/uploads/2017/03/ghosting2.jpg"
-          alt="logo"
-        />
+    <div className="loginForm">
+    <form>
+      <div className="input-container">
+        <input type="text" name="email" placeholder="email" required />
       </div>
-      {!authToken && !minimal && (
-        <button
-          className="nav-button"
-          onClick={handleClick}
-          disabled={showModal}
-        >
-          Log in
-        </button>
-      )}
-    </nav>
+      <div className="input-container">
+        <input type="password" name="pass" placeholder="password" required />
+      </div>
+      <div className="login-button">
+        <input type="submit" value="login" />
+      </div>
+    </form>
+  </div>
   );
 };
-export default Nav;

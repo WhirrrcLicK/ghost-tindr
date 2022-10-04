@@ -13,12 +13,9 @@ export default function AuthModal(props) {
   };
 
   return (
-    <div className="auth-modal">
-      <div className="close-icon" onClick={handleClick}>
-        ⓧ
-      </div>
-      <h2>{props.isSignUp ? "CREATE ACCOUNT" : "LOG IN"}</h2>
+    <div className="register">
       <form onSubmit={handleSubmit}>
+        <div className="createform">
         <input
           type="email"
           id="email"
@@ -35,6 +32,7 @@ export default function AuthModal(props) {
           required={true}
           onChange={(e) => setPassword(e.target.value)}
         />
+        </div>
         <input className="secondary-button" type="submit" />
       </form>
     </div>

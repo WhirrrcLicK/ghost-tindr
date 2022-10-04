@@ -30,13 +30,10 @@ export default function Create() {
   console.log(formData);
 
   return (
-    <>
-      <Nav minimal={true} setShowModal={() => {}} showModal={false} />
       <div className="create">
-        <h2>CREATE PROFILE</h2>
+        <p>Create Profile</p>
         <form onSubmit={handleSumbit}>
           <section>
-            <label htmlFor="name">Name</label>
             <input
               id="name"
               type="text"
@@ -46,8 +43,6 @@ export default function Create() {
               value={formData.name}
               onChange={handleChange}
             />
-
-            <label htmlFor="age">Age</label>
             <input
               id="age"
               type="number"
@@ -57,37 +52,50 @@ export default function Create() {
               value={formData.age}
               onChange={handleChange}
             />
-
-            <label htmlFor="interested">Interested In</label>
+              <input
+                id="location"
+                type="text"
+                name="location"
+                required={true}
+                placeholder="Location"
+                value={formData.bios}
+                onChange={handleChange}
+              />
+              <input
+                id="ghost_type"
+                type="text"
+                name="ghost_type"
+                required={true}
+                placeholder="Ghost type"
+                value={formData.bios}
+                onChange={handleChange}
+              />
             <input
               id="interested"
               type="text"
               name="interested_in"
-              placeholder="Interested In"
+              placeholder="Looking for"
               required={true}
               value={formData.interested_in}
               onChange={handleChange}
             />
-
-            <label htmlFor="bios">Bios</label>
-            <input
+                        <input
               id="bios"
               type="text"
               name="bios"
               required={true}
-              placeholder="I like..."
+              placeholder="About me"
               value={formData.bios}
               onChange={handleChange}
             />
-            <input type="submit" />
           </section>
-
           <section>
             <label htmlFor="url">Profile Photo</label>
             <input
               id="url"
               type="url"
               name="url"
+              placeholder="insert image url here"
               required={true}
               onChange={handleChange}
             />
@@ -96,9 +104,9 @@ export default function Create() {
                 <img src={formData.url} alt="profile pic preview" />
               )}
             </div>
+          <input type="submit" />
           </section>
         </form>
       </div>
-    </>
   );
 }

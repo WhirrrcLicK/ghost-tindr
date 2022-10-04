@@ -12,24 +12,28 @@ import Conversations from "./Ghost-Tindr/Conversations";
 function App() {
   return (
     <div className="App">
-      <Header />
       <Router>
         <Switch>
           <Route path="/create">
+            <Header />
             <Create />
+            <Footer />
           </Route>
           <Route path="/cards">
+            <Header />
             <TinderCards />
+            <Footer />
           </Route>
           <Route path="/conversations">
+            <Header />
             <Conversations />
+            <Footer />
           </Route>
           <Route path="/">
             <Home />
           </Route>
         </Switch>
       </Router>
-      <Footer />
     </div>
   );
 }
