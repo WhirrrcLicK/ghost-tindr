@@ -2,8 +2,6 @@ import { set } from "lodash";
 import React, { useState } from "react";
 import Nav from "../Nav";
 
-<<<<<<< HEAD
-=======
 export default function Create() {
   const [formData, setFormData] = useState({
     user_id: "",
@@ -13,7 +11,6 @@ export default function Create() {
     bios: "",
     url: "",
   });
->>>>>>> 46085aaf82ba73ecf3936bd489adbb5d9b160a55
 
   const handleSumbit = () => {
     console.log("submit");
