@@ -14,9 +14,14 @@
     "morgan": "^1.9.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.1",
+    "react-router-dom": "^5.3.3",
     "react-scripts": "5.0.1",
+<<<<<<< HEAD
     "sass": "^1.55.0",
+=======
+    "react-tinder-card": "^1.5.4",
+    "sass": "^1.35.1",
+>>>>>>> 46085aaf82ba73ecf3936bd489adbb5d9b160a55
     "web-vitals": "^2.1.4"
   },
   "scripts": {
