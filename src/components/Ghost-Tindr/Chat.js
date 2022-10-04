@@ -1,10 +1,5 @@
-import React from 'react'
-
-import useVisualMode from "../../hooks/useVisualMode"
+import React from "react";
 
 export default function Chat(props) {
-
-  return (
-    <> </>
-  );
+  return <> </>;
 }
