@@ -17,7 +17,7 @@ export default function Nav({ minimal, setShowModal, showModal, setIsSignUp }) {
         <input type="password" name="pass" placeholder="password" required />
       </div>
       <div className="login-button">
-        <input type="submit" value="login" />
+        <input type="submit" value="login" onClick={handleClick} />
       </div>
     </form>
   </div>

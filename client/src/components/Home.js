@@ -12,6 +12,7 @@ export default function Home() {
     setIsSignUp(true);
   } else {
     setShowModal(false);
+    setIsSignUp(false);
   }
 }
   return (
