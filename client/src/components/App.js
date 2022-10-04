@@ -12,6 +12,7 @@ import Conversations from "./Ghost-Tindr/Conversations";
 function App() {
   return (
     <div className="App">
+      <Header />
       <Router>
         <Switch>
           <Route path="/create">
@@ -19,7 +20,6 @@ function App() {
           </Route>
           <Route path="/cards">
             <TinderCards />
-            <Footer />
           </Route>
           <Route path="/conversations">
             <Conversations />
@@ -29,6 +29,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      <Footer />
     </div>
   );
 }
