@@ -11,10 +11,10 @@ export default function AuthModal(props) {
 
   let history = useHistory();
 
-  console.log(email, password);
-  const handleClick = () => {
-    props.setShowModal(false);
-  };
+  // console.log(email, password);
+  // const handleClick = () => {
+  //   props.setShowModal(false);
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
