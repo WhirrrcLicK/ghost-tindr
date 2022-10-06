@@ -1,16 +1,15 @@
-import React from 'react'
+import React from "react";
 
-import './styles.scss'
+import "./styles.scss";
 
-export default function Profile(props) {
-
+export default function ViewProfile(props) {
   return (
-    <article className="viewprofile"> 
-    <container className="user_profile">
-    <div className="user_img">User Image</div>
-    <div className="user_info">User Info</div>
-    </container>
-    <div className="swipe_buttons">Like or Dislike</div>
+    <article className="viewprofile">
+      <container className="user_profile">
+        <div className="user_img">User Image</div>
+        <div className="user_info">User Info</div>
+      </container>
+      <div className="swipe_buttons">Like or Dislike</div>
     </article>
   );
 }

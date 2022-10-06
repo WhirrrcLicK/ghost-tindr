@@ -76,6 +76,7 @@ app.post("/login", async (req, res) => {
   }
 });
 
+// Get individual user
 app.get("/user", async (req, res) => {
   const client = new MongoClient(uri);
   const userId = req.query.userId;
@@ -153,6 +154,32 @@ app.put("/addmatch", async (req, res) => {
     };
     const user = await users.updateOne(query, updateInfo);
     res.send(user);
+  } finally {
+    await client.close();
+  }
+});
+
+// Get all Users by userIds in the Database
+app.get("/users", async (req, res) => {
+  const client = new MongoClient(uri);
+  const userIds = JSON.parse(req.query.userIds);
+  try {
+    await client.connect();
+    const database = client.db("ghost-tindr");
+    const users = database.collection("users");
+
+    const allMatched = [
+      {
+        $match: {
+          user_id: {
+            $in: userIds,
+          },
+        },
+      },
+    ];
+
+    const foundUsers = await users.aggregate(allMatched).toArray();
+    res.json(foundUsers);
   } finally {
     await client.close();
   }

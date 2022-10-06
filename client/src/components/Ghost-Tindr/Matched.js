@@ -1,38 +1,36 @@
-import React, { useState, useEffect } from "react";
-import { useCookies } from "react-cookie";
 import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useCookies } from "react-cookie";
 
+export default function Matched({ matches }) {
+  const [matchedProfiles, setMatchedProfiles] = useState([]);
+  const [cookies, setCookie, removeCookie] = useCookies(null);
 
-export default function Matched() {
-  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
-  const [ghost, setGhost] = useState([]);
-
+  const matchedUserIds = matches.map(({ user_id }) => user_id);
   const userId = cookies.UserId;
 
-  const getGhost = async () => {
+  const getMatches = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/user", {
-        params: { userId },
+      const response = await axios.get("http://localhost:8000/users", {
+        params: { userIds: JSON.stringify(matchedUserIds) },
       });
-      setGhost(response.data);
+      setMatchedProfiles(response.data);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    getGhost();
+    getMatches();
   }, []);
 
-  
-  return (
-    <div className="chat-item">
-    <div className="profile">
-      <div className="img-container">
-        <img src={ghost.url1} alt={"photo of " + ghost.name} />
-      </div>
-      <h3>{ghost.name}</h3>
-    </div>
-  </div>
+  console.log(matchedProfiles);
+
+  const filteredMatchedProfiles = matchedProfiles?.filter(
+    (matchedProfile) =>
+      matchedProfile.matches.filter((profile) => profile.user_id === userId)
+        .length > 0
   );
+
+  return <div className="matches-display"></div>;
 }
