@@ -54,26 +54,6 @@ export default function TinderCards() {
   };
 
   return (
-    // <>
-    //   {ghost && (
-    //     <div className="tinderCards__cardContainer">
-    //       {ghost.map((eachGhost) => (
-    //         <TinderCard
-    //           className="swipe"
-    //           key={eachGhost.name}
-    //           preventSwipe={["up", "down"]}
-    //         >
-    //           <div
-    //             style={{ backgroundImage: "url(" + eachGhost.url1 + ")" }}
-    //             className="card"
-    //           >
-    //             <h3>{eachGhost.name}</h3>
-    //           </div>
-    //         </TinderCard>
-    //       ))}
-    //     </div>
-    //   )}
-    // </>
     <>
       {ghost && (
         <div className="dashboard">

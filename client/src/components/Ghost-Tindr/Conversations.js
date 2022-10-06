@@ -2,15 +2,23 @@ import React, { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
 import axios from "axios";
 import ChatDisplay from "./ChatDisplay";
-import ChatHeader from "./ChatHeader";
-import Matched from "./Matched";
+import Header from "./Header"
+import Footer from "./Footer"
+import ChatItem from "./ChatItem"
+import "./conversations.scss"
 
 export default function Conversations() {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   const [ghost, setGhost] = useState([]);
 
   const userId = cookies.UserId;
-console.log('filtered array:', ghost.filter(g => userId === g.user_id)[0].matches)
+  const currentGhost = ghost.find(g => userId === g.user_id)
+  console.log('current ghost:', currentGhost)
+  const matches = !currentGhost ? [] : currentGhost.matches.map(match => {
+    const foundGhost = ghost.find(g => match.user_id === g.user_id)
+    return <ChatItem ghost={foundGhost} />
+  })
+
   const getGhost = async () => {
     try {
       const response = await axios.get("http://localhost:8000/users", {
@@ -52,15 +60,11 @@ console.log('filtered array:', ghost.filter(g => userId === g.user_id)[0].matche
 
   return (
     <div className="conversations">
-      <ChatHeader ghost={ghost} />
-      <div>
-        <button className="option" onClick={getMatches}>
-          Matches
-        </button>
-        <button className="option">Chats</button>
+      <Header />
+      <div className="chat-items-container">
+      {matches}
       </div>
-      {ghost.matches && <Matched matches={ghost.matches} />}
-      <ChatDisplay />
+      <Footer />
     </div>
   );
 }

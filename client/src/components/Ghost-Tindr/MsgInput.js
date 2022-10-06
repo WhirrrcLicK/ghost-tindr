@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "./conversations.scss"
 
 export default function MsgInput() {
   const [text, setText] = useState("");

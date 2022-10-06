@@ -1,0 +1,44 @@
+.home {
+  display:flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.logo-lrg {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 100%;
+}
+
+.login {
+  padding: 10px;
+  padding-top: 0px;
+}
+
+.loginForm {
+  padding: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.input-container {
+  padding: 5px;
+}
+
+.login-button {
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.logincreate {
+  margin-bottom: 30px;
+}
+
+.createform {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
