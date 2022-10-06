@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
+import "./conversations.scss"
 
 export default function Matched({ matches }) {
   const [matchedProfiles, setMatchedProfiles] = useState([]);

@@ -8,13 +8,16 @@
 .chat-items-container {
   display: flex;
   flex-direction: column;
+  // padding-top: 20px;
+  // padding-bottom: 20px;
   height: 100%;
 }
 .chat-item {
-  height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: aquamarine;
+  height: 40px;
   margin: 5px;
 }
 
