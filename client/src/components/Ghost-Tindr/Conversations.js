@@ -10,21 +10,21 @@ export default function Conversations() {
   const [ghost, setGhost] = useState([]);
 
   const userId = cookies.UserId;
+console.log('filtered array:', ghost.filter(g => userId === g.user_id)[0].matches)
+  const getGhost = async () => {
+    try {
+      const response = await axios.get("http://localhost:8000/users", {
+        params: { userId },
+      });
+      setGhost(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  // const getGhost = async () => {
-  //   try {
-  //     const response = await axios.get("http://localhost:8000/users", {
-  //       params: { userId },
-  //     });
-  //     setGhost(response.data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   getGhost();
-  // }, []);
+  useEffect(() => {
+    getGhost();
+  }, []);
 
   // const updateMatches = async (matchedUserId) => {
   //   try {
@@ -38,23 +38,23 @@ export default function Conversations() {
   //   }
   // };
 
-  const getMatches = async () => {
-    try {
-      const response = await axios.get("http://localhost:8000/user", {
-        params: { userId },
-      });
-      setGhost(response.data);
-      console.log(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const getMatches = async () => {
+  //   try {
+  //     const response = await axios.get("http://localhost:8000/users", {
+  //       params: { userId },
+  //     });
+  //     setGhost(response.data);
+  //     console.log(response.data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   return (
     <div className="conversations">
       <ChatHeader ghost={ghost} />
       <div>
-        <button className="option" onClick={() => getMatches}>
+        <button className="option" onClick={getMatches}>
           Matches
         </button>
         <button className="option">Chats</button>
