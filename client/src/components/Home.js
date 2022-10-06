@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="overlay">
       <div className="home">
-        <div className="logo-lrg">RELIC</div>
+        <div className="logo-lrg"><img src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork.png?raw=true" className="logo" /></div>
     <div className="login">
       <Nav
         minimal={false}

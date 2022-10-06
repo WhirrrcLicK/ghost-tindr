@@ -44,6 +44,7 @@ export default function TinderCards() {
   const swiped = (direction, swipedUserId) => {
     if (direction === "right") {
       updateMatches(swipedUserId);
+      console.log(`added to matches`)
     }
     setLastDirection(direction);
   };
@@ -78,9 +79,9 @@ export default function TinderCards() {
         <div className="dashboard">
           {/* <Conversations ghost={ghost} /> */}
           <div className="tinderCards__cardContainer">
-            {ghost.map((eachGhost) => (
+            {ghost.slice(1).map((eachGhost) => (
               <TinderCard
-                className="swipe"
+                className="swipe"s
                 key={eachGhost.user_id}
                 onSwipe={(dir) => swiped(dir, eachGhost.user_id)}
                 onCardLeftScreen={() => outOfFrame(eachGhost.name)}

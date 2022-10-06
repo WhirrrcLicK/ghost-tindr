@@ -170,16 +170,18 @@ app.get("/users", async (req, res) => {
 
     const allMatched = [
       {
-        $match: {
-          user_id: {
-            $in: userIds,
-          },
-        },
-      },
+        '$match': {
+          'user_id': {
+            '$in': userIds
+          }
+        }
+      }
     ];
 
     const foundUsers = await users.aggregate(allMatched).toArray();
-    res.json(foundUsers);
+
+    res.json(foundUsers)
+
   } finally {
     await client.close();
   }
