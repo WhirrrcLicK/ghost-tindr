@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Nav from "./Nav";
 import AuthModal from "./AuthModal";
+import "./home.scss"
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);

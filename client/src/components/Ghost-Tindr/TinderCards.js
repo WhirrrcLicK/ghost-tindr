@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import TinderCard from "react-tinder-card";
 import { useCookies } from "react-cookie";
+import "./browse.scss"
 
 export default function TinderCards() {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
@@ -50,26 +51,6 @@ export default function TinderCards() {
   };
 
   return (
-    // <>
-    //   {ghost && (
-    //     <div className="tinderCards__cardContainer">
-    //       {ghost.map((eachGhost) => (
-    //         <TinderCard
-    //           className="swipe"
-    //           key={eachGhost.name}
-    //           preventSwipe={["up", "down"]}
-    //         >
-    //           <div
-    //             style={{ backgroundImage: "url(" + eachGhost.url1 + ")" }}
-    //             className="card"
-    //           >
-    //             <h3>{eachGhost.name}</h3>
-    //           </div>
-    //         </TinderCard>
-    //       ))}
-    //     </div>
-    //   )}
-    // </>
     <>
       {ghost && (
         <div className="tinderCards__cardContainer">
@@ -85,7 +66,7 @@ export default function TinderCards() {
                 style={{ backgroundImage: "url(" + eachGhost.url1 + ")" }}
                 className="card"
               >
-                <h3>{eachGhost.name}</h3>
+                <p>{eachGhost.name}</p>
               </div>
             </TinderCard>
           ))}

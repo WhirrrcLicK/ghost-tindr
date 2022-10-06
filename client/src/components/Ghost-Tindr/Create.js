@@ -3,6 +3,8 @@ import Nav from "../Nav";
 import { useCookies } from "react-cookie";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import Header from "./Header"
+import "./create.scss"
 
 export default function Create() {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
@@ -50,6 +52,7 @@ export default function Create() {
 
   return (
     <div className="create">
+      <Header />
       <p>Create Profile</p>
       <form onSubmit={handleSumbit}>
         <section>
@@ -110,7 +113,7 @@ export default function Create() {
         </section>
 
         <section>
-          <label htmlFor="url">Profile Photo</label>
+          <label htmlFor="url">Upload Photos</label>
           <input
             id="url1"
             type="url"
@@ -124,8 +127,6 @@ export default function Create() {
               <img src={formData.url1} alt="profile pic preview" />
             )}
           </div>
-
-          <label htmlFor="url">Bio Photo</label>
           <input
             id="url2"
             type="url"
@@ -140,7 +141,6 @@ export default function Create() {
             )}
           </div>
 
-          <label htmlFor="url">Bio Photo</label>
           <input
             id="url3"
             type="url"

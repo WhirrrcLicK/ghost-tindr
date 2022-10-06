@@ -1,0 +1,31 @@
+.conversations {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.chat-items-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.chat-item {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+}
+
+.img-container {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.img-container img {
+  width: 100%;
+}
