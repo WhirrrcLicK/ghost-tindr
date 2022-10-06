@@ -6,7 +6,7 @@ const uri =
 const { v4: uuidv4 } = require("uuid");
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 // const { application } = require('express')
 // require('dotenv').config()
 
