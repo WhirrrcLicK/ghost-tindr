@@ -43,10 +43,10 @@ body {
 .footer__icon {
   padding: 10px;
   height: 40px;
-} 
+}
 
 .home {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   flex-direction: column;
   height: 100vh;
@@ -84,7 +84,7 @@ body {
 }
 
 .viewprofile {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-left: 10px;
@@ -92,29 +92,28 @@ body {
 }
 
 .user_profile {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: start;
   height: 100%;
 }
 
 .user_img {
-  display:flex;
+  display: flex;
   height: 300px;
-  background-color:bisque;
+  background-color: bisque;
 }
 
 .user_info {
-  display:flex;
+  display: flex;
   height: 30%;
-  background-color:tomato;
+  background-color: tomato;
 }
 
 .swipe_buttons {
-  display:flex;
+  display: flex;
   height: 30%;
-  background-color:aquamarine;
-
+  background-color: aquamarine;
 }
 
 .logo-lrg {
@@ -146,7 +145,6 @@ body {
 .secondary-button:hover {
   color: rgb(48, 48, 48);
 }
-
 
 // .header {
 //   display: flex;
@@ -242,7 +240,7 @@ nav .logo-container .logo {
   display: flex;
   flex-direction: column;
   border-width: 6px;
-  border-color:rgba(0, 0, 0, 0.3)
+  border-color: rgba(0, 0, 0, 0.3);
 }
 
 .createform {
@@ -362,6 +360,14 @@ nav .logo-container .logo {
   text-align: center;
 }
 
+.conversations .chat-container-header {
+  background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .conversations .option {
   border: none;
   background-color: rgb(255, 255, 255);
@@ -373,14 +379,6 @@ nav .logo-container .logo {
 
 .conversations .option:disabled {
   border-bottom: solid 4px rgb(187, 187, 187);
-}
-
-.chat-container-header {
-  background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .conversations .profile,
@@ -401,4 +399,15 @@ nav .logo-container .logo {
 
 .img-container img {
   width: 100%;
+}
+
+/*-------- Chat Display --------*/
+.msg {
+  padding: 20px;
+  height: 60vh;
+  overflow-y: auto;
+}
+
+.msg-input {
+  padding: 20px;
 }

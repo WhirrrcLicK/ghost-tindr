@@ -1,11 +1,5 @@
 import React from "react";
-import classNames from "classnames";
 
-import './Message.scss'
-
-export default function Message(props) {
-
-return (
-<></>
-   );
+export default function Message() {
+  return <div className="msg"></div>;
 }

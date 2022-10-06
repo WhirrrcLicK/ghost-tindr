@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
 import axios from "axios";
-import Chat from "./Chat";
+import ChatDisplay from "./ChatDisplay";
 import ChatHeader from "./ChatHeader";
 import Matched from "./Matched";
 
@@ -11,30 +11,56 @@ export default function Conversations() {
 
   const userId = cookies.UserId;
 
-  const getGhost = async () => {
+  // const getGhost = async () => {
+  //   try {
+  //     const response = await axios.get("http://localhost:8000/users", {
+  //       params: { userId },
+  //     });
+  //     setGhost(response.data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   getGhost();
+  // }, []);
+
+  // const updateMatches = async (matchedUserId) => {
+  //   try {
+  //     await axios.put("http://localhost:8000/addmatch", {
+  //       userId,
+  //       matchedUserId,
+  //     });
+  //     getGhost();
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+
+  const getMatches = async () => {
     try {
       const response = await axios.get("http://localhost:8000/user", {
         params: { userId },
       });
       setGhost(response.data);
+      console.log(response.data);
     } catch (error) {
       console.log(error);
     }
   };
 
-  useEffect(() => {
-    getGhost();
-  }, []);
-
   return (
     <div className="conversations">
       <ChatHeader ghost={ghost} />
       <div>
-        <button className="option">Matches</button>
-        <button className="option">Chat</button>
+        <button className="option" onClick={() => getMatches}>
+          Matches
+        </button>
+        <button className="option">Chats</button>
       </div>
-      <Matched />
-      <Chat />
+      {ghost.matches && <Matched matches={ghost.matches} />}
+      <ChatDisplay />
     </div>
   );
 }

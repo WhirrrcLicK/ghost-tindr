@@ -1,5 +1,4 @@
 import React from "react";
-// import "./App.scss";
 import "./Ghost-Tindr/styles.scss";
 import Header from "./Ghost-Tindr/Header";
 import Home from "./Home";
@@ -8,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import TinderCards from "./Ghost-Tindr/TinderCards";
 import Footer from "./Ghost-Tindr/Footer";
 import Conversations from "./Ghost-Tindr/Conversations";
+import ViewProfile from "./Ghost-Tindr/ViewProfile";
 import { useCookies } from "react-cookie";
 
 function App() {
@@ -37,6 +37,11 @@ function App() {
               <Footer />
             </Route>
           )}
+          <Route path="/profile">
+            <Header />
+            <ViewProfile />
+            <Footer />
+          </Route>
           <Route path="/">
             <Home />
           </Route>
