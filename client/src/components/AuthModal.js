@@ -38,7 +38,7 @@ export default function AuthModal(props) {
   return (
     <div className="register">
       <form onSubmit={handleSubmit}>
-        <div className="createform">
+        <div className="input-container">
           <input
             type="email"
             id="email"
@@ -50,7 +50,7 @@ export default function AuthModal(props) {
           <input
             type="password"
             id="password"
-            name="password"
+            name="pass"
             placeholder="password"
             required={true}
             onChange={(e) => setPassword(e.target.value)}

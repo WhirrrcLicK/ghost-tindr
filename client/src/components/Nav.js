@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { useCookies } from "react-cookie";
+import "./home.scss"
 
 export default function Nav({ minimal, setShowModal, showModal, setIsSignUp }) {
   const [email, setEmail] = useState(null);
@@ -54,8 +55,8 @@ export default function Nav({ minimal, setShowModal, showModal, setIsSignUp }) {
           />
         </div>
         {!authToken && (
-          <div className="login-button">
-            <button onClick={handleClick}>Login</button>
+          <div className="login">
+            <button className="login-button" onClick={handleClick}>Login</button>
           </div>
         )}
       </form>

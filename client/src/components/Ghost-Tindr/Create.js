@@ -101,8 +101,10 @@ export default function Create() {
             value={formData.interested_in}
             onChange={handleChange}
           />
-          <input
+          <textarea
             id="bio_description"
+            cols="10"
+            rows="5"
             type="text"
             name="bio_description"
             required={true}

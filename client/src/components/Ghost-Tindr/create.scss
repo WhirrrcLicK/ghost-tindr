@@ -21,24 +21,43 @@
 }
 
 .create form input {
-  padding: 5px 15px;
-  margin: 5px;
-  font-size: 12px;
-  border: solid 1px rgb(219, 219, 219);
-  border-radius: 7px;
+  border: none;
+  background-color: #1a1914;
+  color: #4f4d45;
+  opacity: 0.8;
+  margin: 6px;
+  width:260px;
+  border-radius: 5px;
 }
 
-.create form input {
-  margin-right: 10px;
-  width: 200px;
+.create form textarea[id="bio_description"] {
+  border: none;
+  background-color: #1a1914;
+  color: #4f4d45;
+  opacity: 0.8;
+  margin: 6px;
+  margin-bottom: 0;
+  width:260px;
+  border-radius: 5px;
+}
+
+.create form input[type="submit"] {
+  text-transform: uppercase;
+  width: 100px;
+  height: 30px;
+  color: #4f4d45;
+  font-size: 12px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  border: none;
+  background: rgb(78,74,58);
+  background: linear-gradient(180deg, rgba(78,74,58,1) 0%, rgba(43,41,56,1) 36%, rgba(28,27,38,1) 57%, rgba(14,14,12,1) 91%);
+  opacity: 0.8;
 }
 
 .create form input[type="submit"]:hover {
-  background-color: rgb(235, 235, 235);
-}
-
-.create form input[type="submit"]:active {
-  background-color: rgb(226, 115, 115);
+  color: #aba781;
 }
 
 .create form .photo-container img {
