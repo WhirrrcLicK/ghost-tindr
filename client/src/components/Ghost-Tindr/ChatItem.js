@@ -1,39 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useCookies } from "react-cookie";
-import axios from "axios";
-import "./conversations.scss"
+import "./conversations.scss";
+import { useHistory, Link } from "react-router-dom";
 
 export default function ChatItem(props) {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   const [ghost, setGhost] = useState([]);
 
-  console.log('props:', props)
+  // let history = useHistory();
+  // // console.log("props:", props);
+  // const handleClick = () => {
+  //   console.log("ghost", props.ghost);
+  //   history.push(`/chat/${props.ghost.user_id}`);
+  // };
 
   const userId = cookies.UserId;
 
-  // const getGhost = async () => {
-  //   try {
-  //     const response = await axios.get("http://localhost:8000/users", {
-  //       params: { userId },
-  //     });
-  //     setGhost(response.data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   getGhost();
-  // }, []);
-
   return (
-    <div className="chat-item">
-      <div className="profile">
-        <div className="img-container">
-          <img src={props.ghost.url1} alt={"photo of " + props.ghost.name} />
+    <Link to={`/chat/${props.ghost.name}`}>
+      <div className="chat-item">
+        <div className="profile">
+          <div className="img-container">
+            <img src={props.ghost.url1} alt={"photo of " + props.ghost.name} />
+          </div>
+          <p>{props.ghost.name}</p>
+          <p>{props.ghost.message1}</p>
         </div>
-        <p>{props.ghost.name}</p>
       </div>
-    </div>
+    </Link>
   );
 }

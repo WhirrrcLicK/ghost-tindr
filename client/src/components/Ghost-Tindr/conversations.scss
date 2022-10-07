@@ -32,3 +32,67 @@
 .img-container img {
   width: 100%;
 }
+
+/*-------- ChatDisplay --------*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.chat-display-image {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.chat-display-timestamp {
+  text-align: center;
+  padding: 20px;
+  color: gray;
+}
+
+.chat-display-text {
+  margin-left: 10px;
+  background-color: lightgray;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.chat-display-message {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+}
+
+.chat-display-owntext {
+  margin-left: auto;
+  background-color: #29b3cd;
+  padding: 15px;
+  border-radius: 20px;
+  color: white;
+}
+
+.msg-form {
+  display: flex;
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid lightgray;
+}
+
+.msg-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+
+.send-button {
+  margin-right: 20px;
+  border: none;
+  background-color: white;
+  font-weight: bolder;
+  color: #fe3d71;
+}
