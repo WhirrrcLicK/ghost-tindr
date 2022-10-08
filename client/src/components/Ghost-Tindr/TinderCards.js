@@ -89,7 +89,7 @@ export default function TinderCards() {
               </Link>
             </TinderCard>
           ))}
-          <button><ProfileButton /></button>
+          {/* // <button><ProfileButton /></button> */}
         </div>
       )}
     </>
