@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import TinderCard from "react-tinder-card";
 import { useCookies } from "react-cookie";
-import { useHistory, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function TinderCards() {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
@@ -11,19 +11,15 @@ export default function TinderCards() {
   const [profileId, setProfileId] = useState();
 
   const userId = cookies.UserId;
-  const history = useHistory();
-
 
   const getGhost = async () => {
     try {
       const response = await axios.get("http://localhost:8000/users", {
         params: { userId },
       });
-      console.log("rrrr", response.data);
+
       setGhost(response.data.filter((d) => d.user_id !== userId));
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   useEffect(() => {
@@ -34,7 +30,7 @@ export default function TinderCards() {
       console.log("p", profileId);
       setProfileId(ghost[0].user_id);
     }
-  }, [ghost, profileId]);
+  }, []);
 
   const updateMatches = async (matchedUserId) => {
     try {
@@ -48,7 +44,8 @@ export default function TinderCards() {
     }
   };
 
-  const swiped = (direction, swipedUserId) => {
+  const swiped = (direction, swipedUserId, index) => {
+    setProfileId(ghost[index - 1].user_id);
     if (direction === "right") {
       updateMatches(swipedUserId);
       console.log(`added to matches`);
@@ -64,11 +61,11 @@ export default function TinderCards() {
     <>
       {ghost && (
         <div className="tinderCards__cardContainer">
-          {ghost.map((eachGhost) => (
+          {ghost.map((eachGhost, index) => (
             <TinderCard
               className="swipe"
               key={eachGhost.user_id}
-              onSwipe={(dir) => swiped(dir, eachGhost.user_id)}
+              onSwipe={(dir) => swiped(dir, eachGhost.user_id, index)}
               onCardLeftScreen={() => outOfFrame(eachGhost.name)}
               preventSwipe={["up", "down"]}
             >
@@ -78,18 +75,16 @@ export default function TinderCards() {
               >
                 <h3>{eachGhost.name}</h3>
               </div>
-              <Link to={`/profile/${eachGhost.user_id}`}>
-                <button className="see-profile-button">TESTING 1</button>
-              </Link>
-              <Link to={`/profile/${profileId}`}>
-                <button className="see-profile-button">TESTING 2</button>
-              </Link>
-              <Link to={`/profile/${eachGhost.user_id}`}>
-                <button className="see-profile-button">TESTING 3</button>
-              </Link>
             </TinderCard>
           ))}
-          {/* // <button><ProfileButton /></button> */}
+          <button className="see-profile-button">TESTING 1</button>
+          <Link to={`/profile/${profileId}`}>
+            <button className="see-profile-button">TESTING 2</button>
+          </Link>
+          <button className="see-profile-button">TESTING 3</button>
+          {/* <button>
+            <ProfileButton />
+          </button> */}
         </div>
       )}
     </>
