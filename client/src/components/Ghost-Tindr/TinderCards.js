@@ -77,17 +77,17 @@ export default function TinderCards() {
               >
                 <h3>{eachGhost.name}</h3>
               </div>
-              <Link to={`/profile/${eachGhost.user_id}`}>
-                <button className="see-profile-button">TESTING 1</button>
-              </Link>
-              <Link to={`/profile/${profileId}`}>
-                <button className="see-profile-button">TESTING 2</button>
-              </Link>
-              <Link to={`/profile/${eachGhost.user_id}`}>
-                <button className="see-profile-button">TESTING 3</button>
-              </Link>
             </TinderCard>
           ))}
+          <Link to={`/profile/${eachGhost.user_id}`}>
+            <button className="see-profile-button">TESTING 1</button>
+          </Link>
+          <Link to={`/profile/${profileId}`}>
+            <button className="see-profile-button">TESTING 2</button>
+          </Link>
+          <Link to={`/profile/${eachGhost.user_id}`}>
+            <button className="see-profile-button">TESTING 3</button>
+          </Link>
         </div>
       )}
     </>
