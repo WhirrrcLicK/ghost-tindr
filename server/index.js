@@ -84,9 +84,10 @@ app.get("/user", async (req, res) => {
     await client.connect();
     const database = client.db("ghost-tindr");
     const users = database.collection("users");
-
-    const query = { user_id: userId };
-    const user = await users.findOne(query);
+    // const query = { user_id: userId };
+    // const user = await users.findOne(query);
+    const userArr = await users.find().toArray();
+    const user = userArr.find((user) => user.user_id == userId);
     res.send(user);
   } finally {
     await client.close();
@@ -170,18 +171,17 @@ app.get("/users", async (req, res) => {
 
     const allMatched = [
       {
-        '$match': {
-          'user_id': {
-            '$in': userIds
-          }
-        }
-      }
+        $match: {
+          user_id: {
+            $in: userIds,
+          },
+        },
+      },
     ];
 
     const foundUsers = await users.aggregate(allMatched).toArray();
 
-    res.json(foundUsers)
-
+    res.json(foundUsers);
   } finally {
     await client.close();
   }
