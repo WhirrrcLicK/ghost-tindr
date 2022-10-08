@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import TinderCard from "react-tinder-card";
 import { useCookies } from "react-cookie";
+import ProfileButton from "../Button"
 
 export default function TinderCards() {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
@@ -9,6 +10,7 @@ export default function TinderCards() {
   const [lastDirection, setLastDirection] = useState();
 
   const userId = cookies.UserId;
+
 
   const getGhost = async () => {
     try {
@@ -69,6 +71,7 @@ export default function TinderCards() {
               </div>
             </TinderCard>
           ))}
+          <button><ProfileButton /></button>
         </div>
       )}
     </>
