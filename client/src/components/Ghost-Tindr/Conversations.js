@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
 import axios from "axios";
-import ChatDisplay from "./ChatDisplay";
 import Header from "./Header";
 import Footer from "./Footer";
 import ChatItem from "./ChatItem";

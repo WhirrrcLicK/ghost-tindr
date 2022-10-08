@@ -32,7 +32,7 @@ function App() {
               <Conversations />
             </Route>
           )}
-          <Route path="/profile">
+          <Route path="/profile/:userId">
             <Header />
             <ViewProfile />
             <Footer />

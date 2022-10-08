@@ -1,39 +1,38 @@
 import React, { useState, useEffect } from "react";
-import TinderCards from "./TinderCards";
-import TinderCard from "react-tinder-card";
 import "./styles.scss";
 import axios from "axios";
-import { useCookies } from "react-cookie";
+import { useParams } from "react-router-dom";
 
 export default function ViewProfile(props) {
-  // const [cookies, setCookie, removeCookie] = useCookies(["user"]);
-  // const [ghost, setGhost] = useState([]);
-  // const userId = cookies.UserId;
+  const userId = useParams().userId;
+  const [ghost, setGhost] = useState([]);
 
-  // currentProfile = ghost.find((g) => )
+  const getGhost = async () => {
+    try {
+      const response = await axios.get("http://localhost:8000/user", {
+        params: { userId },
+      });
+      setGhost(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  // const getGhost = async () => {
-  //   try {
-  //     const response = await axios.get("http://localhost:8000/users", {
-  //       params: { userId },
-  //     });
-  //     setGhost(response.data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-  // useEffect(() => {
-  //   getGhost();
-  // }, []);
-  
+  useEffect(() => {
+    getGhost();
+  }, []);
 
-// console.log(getGhost)
   return (
-    <article className="viewprofile">
-      <container className="user_profile">
-        <div className="user_info">User Info</div>
-      </container>
-      <div className="swipe_buttons">Like or Dislike</div>
-    </article>
+    <div>
+      <img src={ghost.url1} alt="img1" />
+      <img src={ghost.url2} alt="img2" />
+      <img src={ghost.url3} alt="img3" />
+      <p>Name: {ghost.name}</p>
+      <p>Age: {ghost.age}</p>
+      <p>I'm a: {ghost.type}</p>
+      <p>I'm looking for: {ghost.interested_in}</p>
+      <p>I'm located at: {ghost.location}</p>
+      <p>About me: {ghost.bio_description}</p>
+    </div>
   );
 }
