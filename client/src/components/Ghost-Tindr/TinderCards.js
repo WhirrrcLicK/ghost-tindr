@@ -4,11 +4,7 @@ import TinderCard from "react-tinder-card";
 import { useCookies } from "react-cookie";
 import { Link } from "react-router-dom";
 import CardButtons from "./CardButtons"
-<<<<<<< HEAD
-import swal from "sweetalert";
-=======
 import swal from "sweetalert"
->>>>>>> 817a8cb998a16841fdbd6fed140e67ee087c302e
 
 export default function TinderCards() {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
