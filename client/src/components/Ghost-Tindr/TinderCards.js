@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import TinderCard from "react-tinder-card";
 import { useCookies } from "react-cookie";
 import { Link } from "react-router-dom";
+import swal from "sweetalert";
 
 export default function TinderCards() {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
@@ -26,8 +27,6 @@ export default function TinderCards() {
     if (ghost.length === 0) {
       getGhost();
     } else {
-      console.log("ghost", ghost);
-      console.log("p", profileId);
       setProfileId(ghost[0].user_id);
     }
   }, []);
@@ -48,6 +47,12 @@ export default function TinderCards() {
     setProfileId(ghost[index - 1].user_id);
     if (direction === "right") {
       updateMatches(swipedUserId);
+      swal({
+        title: "Congrats!",
+        text: "You're matched!",
+        icon: "success",
+        button: "OK",
+      });
       console.log(`added to matches`);
     }
     setLastDirection(direction);
