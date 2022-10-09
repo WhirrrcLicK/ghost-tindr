@@ -4,7 +4,7 @@ import TinderCard from "react-tinder-card";
 import { useCookies } from "react-cookie";
 import { Link } from "react-router-dom";
 import CardButtons from "./CardButtons"
-import swal from "sweetalert";
+// import swal from "sweetalert";
 
 export default function TinderCards() {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
@@ -47,12 +47,12 @@ export default function TinderCards() {
     setProfileId(ghost[index - 1].user_id);
     if (direction === "right") {
       updateMatches(swipedUserId);
-      swal({
-        title: "Congrats!",
-        text: "You're matched!",
-        icon: "success",
-        button: "OK",
-      });
+      // swal({
+      //   title: "Congrats!",
+      //   text: "You're matched!",
+      //   icon: "success",
+      //   button: "OK",
+      // });
       console.log(`added to matches`);
     }
     setLastDirection(direction);
