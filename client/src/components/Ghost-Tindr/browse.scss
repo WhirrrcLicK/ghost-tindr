@@ -15,7 +15,8 @@
 .tinderCards__cardContainer {
   display:flex;
   justify-content: center;
-  margin-top: 11vh;
+  margin-top: 14vh;
+  z-index: 0;
 }
 
 .card {
@@ -26,7 +27,7 @@
   border-radius: 20px;
   background-size: cover;
   background-position: center;
-  box-shadow: 0px 4px 10px 0px rgba(193, 193, 193, 0.3);
+  box-shadow: 0px 4px 10px 0px #530e2d;
 }
 
 .card p {

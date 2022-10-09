@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "react";
 import TinderCard from "react-tinder-card";
 import { useCookies } from "react-cookie";
 import { Link } from "react-router-dom";
-import swal from "sweetalert";
+import CardButtons from "./CardButtons"
+// import swal from "sweetalert";
 
 export default function TinderCards() {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
@@ -18,7 +19,6 @@ export default function TinderCards() {
       const response = await axios.get("http://localhost:8000/users", {
         params: { userId },
       });
-
       setGhost(response.data.filter((d) => d.user_id !== userId));
     } catch (error) {}
   };
@@ -47,12 +47,12 @@ export default function TinderCards() {
     setProfileId(ghost[index - 1].user_id);
     if (direction === "right") {
       updateMatches(swipedUserId);
-      swal({
-        title: "Congrats!",
-        text: "You're matched!",
-        icon: "success",
-        button: "OK",
-      });
+      // swal({
+      //   title: "Congrats!",
+      //   text: "You're matched!",
+      //   icon: "success",
+      //   button: "OK",
+      // });
       console.log(`added to matches`);
     }
     setLastDirection(direction);
@@ -82,14 +82,7 @@ export default function TinderCards() {
               </div>
             </TinderCard>
           ))}
-          <button className="see-profile-button">TESTING 1</button>
-          <Link to={`/profile/${profileId}`}>
-            <button className="see-profile-button">TESTING 2</button>
-          </Link>
-          <button className="see-profile-button">TESTING 3</button>
-          {/* <button>
-            <ProfileButton />
-          </button> */}
+          <CardButtons profileId={profileId}/>
         </div>
       )}
     </>

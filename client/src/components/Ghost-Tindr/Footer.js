@@ -17,20 +17,12 @@ export default function Footer(props) {
 
   return (
     <div className="footer">
-    <IconButton>
-      <PersonIcon className="back_button" fontSize="large" />
-    </IconButton>
-    <IconButton>
-      <PersonIcon className="footer__icon" fontSize="large" />
-    </IconButton>
-    <img
-      className="footer__icon"
-      src="https://i.redd.it/jb1hfi766rb61.png"
-      alt="ghost_logo"
-    />
-    <IconButton>
-      <QuestionAnswerIcon className="footer__icon" fontSize="large" />
-    </IconButton>
+    <a href="http://localhost:3000/cards" className="footerButtons"><img src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%206.png?raw=true" height ="60"/></a>
+    <div className="last_three">
+    <a href="http://localhost:3000/profile/userid:" className="footerButtons"><img src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%209.png?raw=true" height ="65"/></a>
+    <a href="http://localhost:3000/settings" className="footerButtons"><img src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%208.png?raw=true" height ="65"/></a>
+    <a href="http://localhost:3000/conversations" className="footerButtons"><img src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%207.png?raw=true" height ="65"/></a>
+    </div>
   </div>
   );
 }

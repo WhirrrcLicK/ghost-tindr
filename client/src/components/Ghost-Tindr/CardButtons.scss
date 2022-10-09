@@ -1,0 +1,24 @@
+.cardButtons {
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  top: 0;
+  bottom:0;
+  margin-top: 350px;
+
+
+.like {
+    border: none;
+    background: transparent;
+  }
+
+.dislike {
+  border: none;
+  background: transparent;
+  }
+
+.profile {
+    border: none;
+    background: transparent;
+  }
+}
