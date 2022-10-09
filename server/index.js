@@ -59,13 +59,10 @@ app.post("/login", async (req, res) => {
     const users = database.collection("users");
 
     const user = await users.findOne({ email });
-<<<<<<< HEAD
-=======
-    // const correctPassword = await bcrypt.compare(
+    // const correctPassword = awit bcrypt.compare(
     //   password,
     //   user.hashed_password
     // );
->>>>>>> 530a17ca9d74c8886dc297b17c816b9d35243dec
     const correctPassword = password;
 
     if (user && correctPassword) {

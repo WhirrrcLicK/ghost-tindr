@@ -39,12 +39,7 @@ export default function Conversations() {
   return (
     <div className="conversations">
       <Header />
-<<<<<<< HEAD
-      <div className="chat-items-container">{matches}
-        </div> 
-=======
       <div className="chat-items-container">{matches}</div>
->>>>>>> 530a17ca9d74c8886dc297b17c816b9d35243dec
       <Footer />
     </div>
   );
