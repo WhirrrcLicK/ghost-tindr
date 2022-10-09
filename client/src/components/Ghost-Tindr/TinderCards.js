@@ -56,7 +56,7 @@ export default function TinderCards() {
       console.log(`added to matches`);
     }
     setLastDirection(direction);
-  };
+  };  
 
   const outOfFrame = (name) => {
     console.log(name + " left the screen!");
