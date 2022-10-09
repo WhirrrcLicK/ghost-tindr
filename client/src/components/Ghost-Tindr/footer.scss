@@ -12,8 +12,25 @@
   opacity: 0.7
 }
 
-.footer__icon {
-  padding: 10px;
-  height: 40px;
-  color: white;
-} 
+.chat_button {
+  height: 60px;
+}
+
+.settings_button {
+  height: 60px;
+}
+
+.user_profile_button {
+  height: 60px;
+}
+
+.back_button {
+  height: 60px;
+  background: transparent
+}
+
+.footerButtons {
+  border: none;
+  height: 60px;
+  background: transparent
+}
