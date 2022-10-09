@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import CardButtons from "./CardButtons"
 import swal from "sweetalert"
 
+
 export default function TinderCards() {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   const [ghost, setGhost] = useState([]);
@@ -82,7 +83,7 @@ export default function TinderCards() {
               </div>
             </TinderCard>
           ))}
-          <CardButtons profileId={profileId}/>
+          <CardButtons profileId={profileId} />
         </div>
       )}
     </>
