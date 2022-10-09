@@ -4,7 +4,7 @@ import TinderCard from "react-tinder-card";
 import { useCookies } from "react-cookie";
 import { Link } from "react-router-dom";
 import CardButtons from "./CardButtons"
-https://us04web.zoom.us/j/72061532936?pwd=6HjbVBkbvHP7IzJIaqbzknwapsG8wE.1
+import swal from "sweetalert"
 
 export default function TinderCards() {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
@@ -56,7 +56,7 @@ export default function TinderCards() {
       console.log(`added to matches`);
     }
     setLastDirection(direction);
-  };  
+  };
 
   const outOfFrame = (name) => {
     console.log(name + " left the screen!");

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useCookies } from "react-cookie";
-import "./conversations.scss";
+import "./CardButtons.scss";
 import { useHistory, Link } from "react-router-dom";
+import Conversations from "./Conversations"
 
 export default function ChatItem(props) {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
