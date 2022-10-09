@@ -20,8 +20,10 @@ export default function TinderCards() {
         params: { userId },
       });
       setGhost(response.data.filter((d) => d.user_id !== userId));
+      setProfileId(ghost[ghost.length-1].user_id)
     } catch (error) {}
   };
+  console.log("profilestart",profileId)
 
   useEffect(() => {
     if (ghost.length === 0) {
@@ -42,6 +44,8 @@ export default function TinderCards() {
       console.log(err);
     }
   };
+
+  console.log("profileend",profileId)
 
   const swiped = (direction, swipedUserId, index) => {
     setProfileId(ghost[index - 1].user_id);
@@ -82,6 +86,7 @@ export default function TinderCards() {
               </div>
             </TinderCard>
           ))}
+          {console.log("profile", profileId)}
           <CardButtons profileId={profileId}/>
         </div>
       )}

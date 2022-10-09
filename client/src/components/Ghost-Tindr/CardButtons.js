@@ -3,7 +3,7 @@ import TinderCards from "./TinderCards"
 import "./CardButtons.scss"
 
 export default function CardButtons(props) {
-
+console.log("profile", props.profileId)
   return (
     <div className="cardButtons">
     <a href={``}><img src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%204.png?raw=true" height ="110" className="like" /></a>
