@@ -38,7 +38,9 @@ export default function Conversations() {
   return (
     <div className="conversations">
       <Header />
-      <div className="chat-items-container">{matches}</div>
+      <div className="chat-items-container">
+        <ChatItem ghost={ghost} >{matches}</ChatItem>
+        </div> 
       <Footer />
     </div>
   );
