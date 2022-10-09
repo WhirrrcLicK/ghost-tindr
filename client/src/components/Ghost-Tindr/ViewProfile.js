@@ -2,16 +2,16 @@ import React, { useState, useEffect } from "react";
 import "./styles.scss";
 import axios from "axios";
 import { useParams, useHistory } from "react-router-dom";
-import TinderCards from "./TinderCards"
+import TinderCards from "./TinderCards";
 
-export default function ViewProfile(props) {
+export default function ViewProfile() {
   const userId = useParams().userId;
   const [ghost, setGhost] = useState([]);
   const history = useHistory();
 
   const getGhost = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/users", {
+      const response = await axios.get("http://localhost:8000/user", {
         params: { userId },
       });
       setGhost(response.data);
@@ -20,13 +20,13 @@ export default function ViewProfile(props) {
     }
   };
 
-  console.log(userId)
+  console.log(userId);
 
   useEffect(() => {
     getGhost();
   }, []);
-  
-  console.log(ghost)
+
+  console.log(ghost);
   return (
     <>
       <div>
