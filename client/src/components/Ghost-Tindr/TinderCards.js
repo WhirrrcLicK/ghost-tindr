@@ -2,11 +2,14 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import TinderCard from "react-tinder-card";
 import { useCookies } from "react-cookie";
+import { Link } from "react-router-dom";
+import CardButtons from "./CardButtons"
 
 export default function TinderCards() {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   const [ghost, setGhost] = useState([]);
   const [lastDirection, setLastDirection] = useState();
+  const [profileId, setProfileId] = useState();
 
   const userId = cookies.UserId;
 
@@ -15,14 +18,16 @@ export default function TinderCards() {
       const response = await axios.get("http://localhost:8000/users", {
         params: { userId },
       });
-      setGhost(response.data);
-    } catch (error) {
-      console.log(error);
-    }
+      setGhost(response.data.filter((d) => d.user_id !== userId));
+    } catch (error) {}
   };
 
   useEffect(() => {
-    getGhost();
+    if (ghost.length === 0) {
+      getGhost();
+    } else {
+      setProfileId(ghost[0].user_id);
+    }
   }, []);
 
   const updateMatches = async (matchedUserId) => {
@@ -37,7 +42,8 @@ export default function TinderCards() {
     }
   };
 
-  const swiped = (direction, swipedUserId) => {
+  const swiped = (direction, swipedUserId, index) => {
+    setProfileId(ghost[index - 1].user_id);
     if (direction === "right") {
       updateMatches(swipedUserId);
       console.log(`added to matches`);
@@ -53,11 +59,11 @@ export default function TinderCards() {
     <>
       {ghost && (
         <div className="tinderCards__cardContainer">
-          {ghost.slice(1).map((eachGhost) => (
+          {ghost.map((eachGhost, index) => (
             <TinderCard
               className="swipe"
               key={eachGhost.user_id}
-              onSwipe={(dir) => swiped(dir, eachGhost.user_id)}
+              onSwipe={(dir) => swiped(dir, eachGhost.user_id, index)}
               onCardLeftScreen={() => outOfFrame(eachGhost.name)}
               preventSwipe={["up", "down"]}
             >
@@ -69,6 +75,7 @@ export default function TinderCards() {
               </div>
             </TinderCard>
           ))}
+          <CardButtons profileId={profileId}/>
         </div>
       )}
     </>

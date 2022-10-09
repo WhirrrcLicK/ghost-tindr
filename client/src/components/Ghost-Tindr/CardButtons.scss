@@ -1,0 +1,63 @@
+.cardButtons {
+  width: 250px;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  top: 0;
+  margin-top: 520px;
+
+
+.like {
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #4f4d45;
+    font-size: 12px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 15px;
+    background: rgb(78,74,58);
+    background: linear-gradient(180deg, rgba(78,74,58,1) 0%, rgba(43,41,56,1) 36%, rgba(28,27,38,1) 57%, rgba(14,14,12,1) 91%);
+    opacity: 0.8;
+}
+
+  .like {
+    color: #aba781;
+  }
+
+.dislike {
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #4f4d45;
+    font-size: 12px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 15px;
+    background: rgb(78,74,58);
+    background: linear-gradient(180deg, rgba(78,74,58,1) 0%, rgba(43,41,56,1) 36%, rgba(28,27,38,1) 57%, rgba(14,14,12,1) 91%);
+    opacity: 0.8;
+  }
+  
+  .dislike {
+    color: #aba781;
+  }
+
+.profile {
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #4f4d45;
+    font-size: 12px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 15px;
+    background: rgb(78,74,58);
+    background: linear-gradient(180deg, rgba(78,74,58,1) 0%, rgba(43,41,56,1) 36%, rgba(28,27,38,1) 57%, rgba(14,14,12,1) 91%);
+    opacity: 0.8;
+  }
+  
+  .profile {
+    color: #aba781;
+  }
+}
