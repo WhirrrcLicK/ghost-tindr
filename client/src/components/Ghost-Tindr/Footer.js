@@ -17,15 +17,11 @@ export default function Footer(props) {
 
   return (
     <div className="footer">
-    <button className="footerButtons"><img src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%206.png?raw=true" height ="60"/><a href="http://localhost:8000/cards"></a>
-    </button>
+    <a href="http://localhost:3000/cards" className="footerButtons"><img src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%206.png?raw=true" height ="60"/></a>
     <div className="last_three">
-    <button className="footerButtons"><img src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%209.png?raw=true" height ="65"/><a href="http://localhost:8000/cards"></a>
-    </button>
-    <button className="footerButtons"><img src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%208.png?raw=true" height ="65"/><a href="http://localhost:8000/cards"></a>
-    </button>
-    <button className="footerButtons"><img src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%207.png?raw=true" height ="65"/><a href="http://localhost:8000/cards"></a>
-    </button>
+    <a href="http://localhost:3000/profile/userid:" className="footerButtons"><img src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%209.png?raw=true" height ="65"/></a>
+    <a href="http://localhost:3000/settings" className="footerButtons"><img src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%208.png?raw=true" height ="65"/></a>
+    <a href="http://localhost:3000/conversations" className="footerButtons"><img src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%207.png?raw=true" height ="65"/></a>
     </div>
   </div>
   );

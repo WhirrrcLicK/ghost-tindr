@@ -6,11 +6,10 @@
   flex-direction: row;
   justify-content: center;
   height: 50px;
-  background-color: #530e2d;
+  background-color: #0b0707;
   z-index: 100;
   margin-top: 0;
   margin-bottom: auto;
-  opacity: 0.7;
 }
 
 .title {
@@ -25,4 +24,12 @@
   height: 40px;
   object-fit: contain;
   padding: 10px;
+}
+
+.gloop {
+  display: flex;
+  z-index:99;
+  position: fixed;
+  justify-content: center;
+  margin-top: 45px;
 }
