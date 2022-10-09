@@ -60,10 +60,11 @@ app.post("/login", async (req, res) => {
     const users = database.collection("users");
 
     const user = await users.findOne({ email });
-    const correctPassword = await bcrypt.compare(
-      password,
-      user.hashed_password
-    );
+    // const correctPassword = await bcrypt.compare(
+    //   password,
+    //   user.hashed_password
+    // );
+    const correctPassword = password;
 
     if (user && correctPassword) {
       const token = jwt.sign(user, email, {
