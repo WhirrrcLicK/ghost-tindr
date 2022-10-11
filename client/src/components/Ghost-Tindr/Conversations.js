@@ -19,6 +19,7 @@ export default function Conversations() {
         const foundGhost = ghost.find((g) => match.user_id === g.user_id);
         return <ChatItem key={_index} ghost={foundGhost} />;
       });
+  console.log("mmmm", matches);
 
   const getGhost = async () => {
     try {
@@ -38,9 +39,7 @@ export default function Conversations() {
   return (
     <div className="conversations">
       <Header />
-      <div className="chat-items-container">
-        <ChatItem ghost={ghost} >{matches}</ChatItem>
-        </div> 
+      <div className="chat-items-container">{matches}</div>
       <Footer />
     </div>
   );

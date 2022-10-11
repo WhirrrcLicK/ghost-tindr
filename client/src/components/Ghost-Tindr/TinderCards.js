@@ -3,8 +3,9 @@ import React, { useState, useEffect } from "react";
 import TinderCard from "react-tinder-card";
 import { useCookies } from "react-cookie";
 import { Link } from "react-router-dom";
-import CardButtons from "./CardButtons"
-import swal from "sweetalert"
+import CardButtons from "./CardButtons";
+import swal from "sweetalert";
+import Footer from "./Footer";
 
 export default function TinderCards() {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
@@ -88,8 +89,8 @@ export default function TinderCards() {
               </div>
             </TinderCard>
           ))}
-          {console.log("profile", profileId)}
-          <CardButtons profileId={profileId}/>
+          <CardButtons profileId={profileId} />
+          <Footer userId={userId} />
         </div>
       )}
     </>

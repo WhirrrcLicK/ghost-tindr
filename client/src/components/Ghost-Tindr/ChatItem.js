@@ -1,19 +1,13 @@
 import React, { useState } from "react";
 import { useCookies } from "react-cookie";
-import "./CardButtons.scss";
+// import "./CardButtons.scss";
+import "./conversations.scss";
 import { useHistory, Link } from "react-router-dom";
-import Conversations from "./Conversations"
+import Conversations from "./Conversations";
 
 export default function ChatItem(props) {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   const [ghost, setGhost] = useState([]);
-
-  // let history = useHistory();
-  // // console.log("props:", props);
-  // const handleClick = () => {
-  //   console.log("ghost", props.ghost);
-  //   history.push(`/chat/${props.ghost.user_id}`);
-  // };
 
   const userId = cookies.UserId;
 
