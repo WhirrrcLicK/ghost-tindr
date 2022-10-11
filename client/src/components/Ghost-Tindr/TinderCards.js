@@ -20,7 +20,9 @@ export default function TinderCards() {
         params: { userId },
       });
       setGhost(response.data.filter((d) => d.user_id !== userId));
-      setProfileId(ghost[ghost.length-1].user_id)
+    //   if (ghost !== 0) {
+    //   setProfileId(ghost[ghost.length-1].user_id)
+    // }
     } catch (error) {}
   };
   console.log("profilestart",profileId)
@@ -29,7 +31,7 @@ export default function TinderCards() {
     if (ghost.length === 0) {
       getGhost();
     } else {
-      setProfileId(ghost[0].user_id);
+      setProfileId(ghost[ghost.length-1].user_id);
     }
   }, []);
 
