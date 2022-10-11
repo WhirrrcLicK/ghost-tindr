@@ -37,7 +37,7 @@ export default function ViewProfile() {
         <img src={ghost.url3} alt="img3" className="img3"/>
         </div>
         <div className="bio">
-        <p>{ghost.type} looking for a {ghost.interested_in}<br></br><br></br>
+        <p>{ghost.type} looking for {ghost.interested_in}<br></br><br></br>
         About me: {ghost.bio_description}</p>
         </div>
       </div>

@@ -12,12 +12,16 @@
   margin-bottom: auto;
 }
 
+.homelink {
+  z-index: 100;
+}
+
 .header__logo {
   display:flex;
   align-self: center;
   height: 90px;
+  margin-top: 5px;
   object-fit: contain;
-  margin-top: 40px;
   z-index: 100;
 }
 

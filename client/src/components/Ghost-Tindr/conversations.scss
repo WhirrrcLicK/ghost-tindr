@@ -8,8 +8,8 @@
 .chat-items-container {
   display: flex;
   flex-direction: column;
-  // padding-top: 20px;
-  // padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   height: 100%;
 }
 .chat-item {
@@ -34,44 +34,53 @@
 }
 
 /*-------- ChatDisplay --------*/
-a {
-  text-decoration: none;
-  color: inherit;
+
+.chat-display {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  padding-top: 20px;
+  color: #82773d;
+  margin-top: 90px;
 }
 
 .chat-display-image {
   height: 30px;
   width: 30px;
   border-radius: 15px;
-  overflow: hidden;
   margin: 10px;
+  overflow: hidden;
 }
 
 .chat-display-timestamp {
-  text-align: center;
-  padding: 20px;
-  color: gray;
+  color: #4f4d45;
+  padding-top: 200px;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 150px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .chat-display-text {
   margin-left: 10px;
-  background-color: lightgray;
-  padding: 15px;
-  border-radius: 20px;
+  background-color: #211319;
+  padding: 7px;
+  border-radius: 10px;
+  z-index: 99;
 }
 
 .chat-display-message {
   display: flex;
-  padding: 20px;
   align-items: center;
+  z-index: 0;
 }
 
 .chat-display-owntext {
   margin-left: auto;
-  background-color: #29b3cd;
-  padding: 15px;
-  border-radius: 20px;
-  color: white;
+  background-color: #211319;
+  padding: 7px;
+  border-radius: 10px;
 }
 
 .msg-form {
@@ -81,19 +90,29 @@ a {
   position: fixed;
   bottom: 0;
   width: 100%;
-  border-top: 1px solid lightgray;
+  border-top: 6px dotted #211319;
 }
 
 .msg-input {
   flex: 1;
   padding: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
   border: none;
+  background-color: #211319;
+  opacity: 0.8;
+  color:#82773d
 }
 
 .send-button {
-  margin-right: 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 65px;
+  height: 30px;
   border: none;
-  background-color: white;
+  background: linear-gradient(180deg, rgba(78,74,58,1) 0%, rgba(43,41,56,1) 36%, rgba(28,27,38,1) 57%, rgba(14,14,12,1) 91%);
   font-weight: bolder;
-  color: #fe3d71;
+  color: #4f4d45;
 }
+

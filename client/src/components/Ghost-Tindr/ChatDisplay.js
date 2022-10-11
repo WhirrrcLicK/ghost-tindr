@@ -33,9 +33,6 @@ export default function ChatDisplay() {
   return (
     <div className="chat-display">
       <Header />
-      <p className="chat-display-timestamp">
-        YOU MATCHED WITH ELLEN ON 10/13/22
-      </p>
       {messages.map((message) =>
         message.name ? (
           <div className="chat-display-message">
@@ -49,9 +46,17 @@ export default function ChatDisplay() {
         ) : (
           <div className="chat-display-message">
             <p className="chat-display-owntext">{message.message}</p>
+            <img
+              className="chat-display-image"
+              alt={message.name}
+              src={"https://static.scientificamerican.com/sciam/cache/file/D3E36D4B-4DAC-41ED-9A090F94600ABDFE_source.jpg?w=390&h=520&33C2C20C-213F-4EC0-A493EF26CFD87E62"}
+            />
           </div>
         )
       )}
+            <p className="chat-display-timestamp">
+        YOU MATCHED WITH ELLEN ON 10/13/22
+      </p>
       <form className="msg-form">
         <input
           className="msg-input"
