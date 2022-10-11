@@ -1,0 +1,70 @@
+.viewprofile {
+  display:flex;
+  flex-direction: column;
+  justify-content: start;
+  height:1000px;
+}
+
+.lrg_img {
+  display:flex;
+  justify-content: end;
+  max-width: 300px;
+  padding: 20px;
+  min-height: 300px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  margin-left: 45px;
+  margin-top: 80px;
+  box-shadow: 0px 4px 10px 0px #211319;
+}
+
+.name {
+  position: absolute;
+  bottom: 275px;
+  color: #82773d;
+  font-size: 13px;
+  font-weight: 800;
+  width: 150px;
+  background-color: #211319;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
+  opacity: 0.8;
+  text-align: right;
+}
+
+.small_img {
+  display:flex;
+  justify-content: center;
+}
+
+.img2 {
+  display:flex;
+  justify-content: center;
+  padding: 5px;
+  height: 100px;
+  width: 120px;
+  margin-right: 10px;
+}
+
+.img3 {
+  display:flex;
+  justify-content: center;
+  padding: 5px;
+  height: 100px;
+  width: 120px;
+  margin-right: 10px;
+}
+
+.bio{
+  font-size:11px;
+  background-color: #232323;
+  border-radius: 10px;
+  margin: 10px;
+  margin-left: 35px;
+  margin-right: 35px;
+  padding: 10px;
+  text-align: left;
+}

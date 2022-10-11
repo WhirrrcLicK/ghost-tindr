@@ -7,9 +7,8 @@
 
 .logo {
   height: auto;
-  width: 375px;
-  height: 375px;
-  opacity: 0.6;
+  width: 395px;
+  height: 360px;
 }
 
 .logo-lrg {
@@ -56,19 +55,11 @@ input[name=email] {
   border: none;
   background: rgb(78,74,58);
   background: linear-gradient(180deg, rgba(78,74,58,1) 0%, rgba(43,41,56,1) 36%, rgba(28,27,38,1) 57%, rgba(14,14,12,1) 91%);
-  opacity: 0.8;
 }
 
 .login-button:hover {
   color: #aba781;
 }
-
-// .createform {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-around;
-//   padding-bottom: 10px;
-// }
 
 .primary-button {
   text-transform: uppercase;
@@ -80,7 +71,6 @@ input[name=email] {
   border: none;
   background: rgb(78,74,58);
   background: linear-gradient(180deg, rgba(78,74,58,1) 0%, rgba(43,41,56,1) 36%, rgba(28,27,38,1) 57%, rgba(14,14,12,1) 91%);
-  opacity: 0.8;
 }
 
 .primary-button:hover {
@@ -98,7 +88,6 @@ input[name=email] {
   margin-bottom: 15px;
   background: rgb(78,74,58);
   background: linear-gradient(180deg, rgba(78,74,58,1) 0%, rgba(43,41,56,1) 36%, rgba(28,27,38,1) 57%, rgba(14,14,12,1) 91%);
-  opacity: 0.8;
 }
 
 .secondary-button:hover {

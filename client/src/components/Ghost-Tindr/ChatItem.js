@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useCookies } from "react-cookie";
-// import "./CardButtons.scss";
 import "./conversations.scss";
 import { useHistory, Link } from "react-router-dom";
 import Conversations from "./Conversations";

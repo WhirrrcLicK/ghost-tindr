@@ -55,10 +55,10 @@ export default function TinderCards() {
     if (direction === "right") {
       updateMatches(swipedUserId);
       swal({
-        title: "Congrats!",
-        text: "You're matched!",
-        icon: "success",
-        button: "OK",
+        icon: 'https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%2012.png?raw=true',
+        imageWidth: 400,
+        imageHeight: 400,
+        imageAlt: 'Custom image',
       });
       console.log(`added to matches`);
     }
@@ -72,7 +72,7 @@ export default function TinderCards() {
   return (
     <>
       {ghost && (
-        <div className="tinderCards__cardContainer">
+        <div className="swipe_cards">
           {ghost.map((eachGhost, index) => (
             <TinderCard
               className="swipe"
@@ -85,7 +85,7 @@ export default function TinderCards() {
                 style={{ backgroundImage: "url(" + eachGhost.url1 + ")" }}
                 className="card"
               >
-                <h3>{eachGhost.name}</h3>
+                <p>{eachGhost.name}</p>
               </div>
             </TinderCard>
           ))}

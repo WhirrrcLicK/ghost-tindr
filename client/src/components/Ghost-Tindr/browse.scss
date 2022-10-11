@@ -12,30 +12,53 @@
   align-content: space-between;
 }
 
-.tinderCards__cardContainer {
+.swipe_cards {
   display:flex;
   justify-content: center;
-  margin-top: 14vh;
+  margin-top: 17vh;
   z-index: 0;
 }
 
 .card {
+  display:flex;
   position: relative;
   min-width: 300px;
   padding: 20px;
   min-height: 300px;
-  border-radius: 20px;
+  border-radius: 10px;
   background-size: cover;
   background-position: center;
-  box-shadow: 0px 4px 10px 0px #530e2d;
+  justify-content: end;
+  box-shadow: 0px 4px 10px 0px #211319;
 }
 
 .card p {
   position: absolute;
   bottom: 2px;
-  color: white;
+  color: #82773d;
+  background-color: #211319;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
+  opacity: 0.8;
+  margin-left: 20px;
+  position: absolute;
 }
 
 .swipe {
   position: absolute;
+}
+
+.swal-modal {
+  background-color: #12090d;
+}
+
+.swal-button--confirm {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: linear-gradient(180deg, rgba(78,74,58,1) 0%, rgba(43,41,56,1) 36%, rgba(28,27,38,1) 57%, rgba(14,14,12,1) 91%);
+  border: none;
+  width: 50px;
+  color:#82773d;
 }
