@@ -9,7 +9,7 @@ export default function ChatItem(props) {
   const [ghost, setGhost] = useState([]);
 
   const userId = cookies.UserId;
-
+  console.log("props", props.ghost.name)
   return (
     <Link to={`/chat/${props.ghost.name}`}>
       <div className="chat-item">
