@@ -1,21 +1,29 @@
 .create {
-  font-size: 10px;
-  margin-top: 90px;
-  padding-top: 15px;
-  margin-right: 5px;
+  margin-top: 120px;
+  padding-top: 35px;
   text-align: left;
   color: #82773d;
-  border: 4px dotted #211319
+  font-size: 14px;
+}
+
+.create_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 380px;
+  padding: 25px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  border: 8px dotted #211319;
+  margin-left: 55px;
 }
 
 .create p {
-  margin-left: 50px;
+  margin-left: 10px;
 }
+
 .create form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 45px;
+  margin-left: 10px;
 }
 
 .create form section {
@@ -34,9 +42,8 @@
   color: #82773d;
   opacity: 0.8;
   margin: 6px;
-  width:260px;
+  width:270px;
   border-radius: 5px;
-  font-size: 11px;
   font-family: 'Questrial', sans-serif;
 }
 
@@ -47,20 +54,20 @@
   opacity: 0.8;
   margin: 6px;
   margin-bottom: 0;
-  width:260px;
+  width:270px;
   border-radius: 5px;
-  font-size: 11px;
   font-family: 'Questrial', sans-serif;
 }
 
 .create form input[type="submit"] {
   text-transform: uppercase;
+  font-weight: 600;
   width: 100px;
   height: 30px;
   color: #4f4d45;
-  font-size: 12px;
   padding: 5px 10px;
   margin-bottom: 10px;
+  margin-top: 20px;
   border-radius: 30px;
   border: none;
   background: rgb(78,74,58);

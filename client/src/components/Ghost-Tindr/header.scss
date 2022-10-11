@@ -1,11 +1,11 @@
 .header {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 500px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 50px;
+  height: 40px;
   background-color: #0b0707;
   z-index: 100;
   margin-top: 0;
@@ -19,7 +19,7 @@
 .header__logo {
   display:flex;
   align-self: center;
-  height: 90px;
+  height: 110px;
   margin-top: 5px;
   object-fit: contain;
   z-index: 100;
@@ -30,5 +30,6 @@
   z-index:99;
   position: fixed;
   justify-content: center;
-  margin-top: 45px;
+  margin-top: 40px;
+  height: 134px;
 }

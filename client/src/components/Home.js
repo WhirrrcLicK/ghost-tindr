@@ -17,10 +17,8 @@ export default function Home() {
   }
 }
   return (
-    <div className="overlay">
       <div className="home">
         <div className="logo-lrg"><img src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%2013.png?raw=true" className="logo" /></div>
-    <div className="login">
       <Nav
         minimal={false}
         setShowModal={setShowModal}
@@ -36,7 +34,5 @@ export default function Home() {
           <AuthModal setShowModal={setShowModal} isSignUp={isSignUp} />
         )}
         </div>
-      </div>
-    </div>
   );
 }

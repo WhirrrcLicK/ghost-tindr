@@ -79,13 +79,15 @@ export default function TinderCards() {
               key={eachGhost.user_id}
               onSwipe={(dir) => swiped(dir, eachGhost.user_id, index)}
               onCardLeftScreen={() => outOfFrame(eachGhost.name)}
-              preventSwipe={["up", "down"]}
-            >
+              preventSwipe={["up", "down"]} >
               <div
                 style={{ backgroundImage: "url(" + eachGhost.url1 + ")" }}
-                className="card"
-              >
-                <p>{eachGhost.name}</p>
+                className="card" >
+                <p className="cardinfo">
+                  {eachGhost.name}<br></br>
+                  {eachGhost.location}<br></br>
+                  {eachGhost.age}
+                </p>
               </div>
             </TinderCard>
           ))}

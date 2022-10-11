@@ -1,10 +1,11 @@
 .cardButtons {
   display: flex;
-  position: fixed;
   justify-content: space-around;
   top: 0;
   bottom:0;
-  margin-top: 450px;
+  margin-top: 550px;
+  margin-left: 1.5vh;
+  position: fixed;
 }
 
 .like {

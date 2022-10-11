@@ -1,12 +1,14 @@
 .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   position: fixed;
   bottom: 0;
-  width: 100%;
-  height: 90px;
-  display: flex;
-  justify-content: space-between;
+  width: 500px;
+  height: 95px;
   margin-top: auto;
   margin-bottom: 0;
+  margin-left:0;
   background-color: #12090d;
   z-index: 100;
   border-top: 10px dotted #211319;
@@ -14,13 +16,13 @@
 
 .footerButtons {
   border: none;
-  height: 60px;
   background: transparent;
-  padding-left: 5px;
+  padding-left: 10px;
   padding-right: 10px;
   padding-top: 7px;
 }
 
 .last_three {
   padding-top:7px;
+  margin-right: 10px;
 }

@@ -30,7 +30,7 @@ export default function ViewProfile() {
   return (
       <div className="viewprofile">
         <div style={{ backgroundImage: "url(" + ghost.url1 + ")" }} className="lrg_img">
-        <p className="name">{ghost.age}<br></br><br></br>{ghost.name},<br></br><br></br>{ghost.location}</p>
+        <p className="name">{ghost.name}<br></br>{ghost.age}<br></br>{ghost.location}</p>
         </div>
         <div className="small_img">
         <img src={ghost.url2} alt="img2" className="img2"/>

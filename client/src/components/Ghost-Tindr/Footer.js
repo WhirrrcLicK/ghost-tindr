@@ -20,7 +20,7 @@ export default function Footer(props) {
       <a href="http://localhost:3000/cards" className="footerButtons">
         <img
           src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%206.png?raw=true"
-          height="60"
+          height="70"
         />
       </a>
       <div className="last_three">
@@ -31,20 +31,20 @@ export default function Footer(props) {
         <Link to={`/profile/${props.userId}`}>
           <img
             src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%209.png?raw=true"
-            height="65"
+            height="75"
           />
         </Link>
         {/* </a> */}
         <a href="http://localhost:3000/settings" className="footerButtons">
           <img
             src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%208.png?raw=true"
-            height="65"
+            height="75"
           />
         </a>
         <a href="http://localhost:3000/conversations" className="footerButtons">
           <img
             src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%207.png?raw=true"
-            height="65"
+            height="75"
           />
         </a>
       </div>

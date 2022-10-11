@@ -13,41 +13,37 @@
 }
 
 .swipe_cards {
-  display:flex;
-  justify-content: center;
   margin-top: 17vh;
   z-index: 0;
 }
 
 .card {
-  display:flex;
-  position: relative;
-  min-width: 300px;
+  display: flex;
+  justify-content: end;
+  margin-left: 5vh;
+  position: fixed;
+  width: 400px;
   padding: 20px;
-  min-height: 300px;
+  height: 370px;
   border-radius: 10px;
   background-size: cover;
   background-position: center;
-  justify-content: end;
   box-shadow: 0px 4px 10px 0px #211319;
 }
 
-.card p {
+.cardinfo {
   position: absolute;
+  text-align: right;
+  width: 200px;
   bottom: 2px;
   color: #82773d;
   background-color: #211319;
   border-radius: 5px;
-  padding: 5px;
+  padding: 7px;
   padding-left: 7px;
   padding-right: 7px;
   opacity: 0.8;
-  margin-left: 20px;
-  position: absolute;
-}
-
-.swipe {
-  position: absolute;
+  font-size: 16px;
 }
 
 .swal-modal {
