@@ -10,17 +10,14 @@ export default function ChatDisplay() {
     {
       name: "Ghost 1",
       image:
-        "https://as2.ftcdn.net/v2/jpg/04/54/73/29/1000_F_454732959_pjHIUTqFz68f2VxnJMKs4JrMaXuxVo6l.jpg",
-      message: "What's up",
+        "https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/IMG_0178.jpg?raw=true",
+      message: "Hey there.",
     },
     {
       name: "Ghost 1",
       image:
-        "https://as2.ftcdn.net/v2/jpg/04/54/73/29/1000_F_454732959_pjHIUTqFz68f2VxnJMKs4JrMaXuxVo6l.jpg",
-      message: "What's up",
-    },
-    {
-      message: "How's it going!",
+        "https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/IMG_0178.jpg?raw=true",
+      message: "Wanna stand in front of a mirror and say my name a bunch?",
     },
   ]);
 
@@ -29,8 +26,8 @@ export default function ChatDisplay() {
     const replyMessage = {
       name: "Ghost 1",
       image:
-        "https://as2.ftcdn.net/v2/jpg/04/54/73/29/1000_F_454732959_pjHIUTqFz68f2VxnJMKs4JrMaXuxVo6l.jpg",
-      message: "Hey",
+        "https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/IMG_0178.jpg?raw=true",
+      message: "Summon me, and I'll scream at whomever you want.",
     };
     setMessages([...messages, { message: input }]);
     setInput("");
@@ -66,7 +63,7 @@ export default function ChatDisplay() {
         )
       )}
       <p className="chat-display-timestamp">
-        YOU MATCHED WITH BEETLEGEUSE ON 10/13/22
+        YOU MATCHED WITH BlOODY MARY ON 10/13/22
       </p>
       <form className="msg-form">
         <input
