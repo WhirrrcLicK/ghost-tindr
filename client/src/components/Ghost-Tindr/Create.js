@@ -58,7 +58,7 @@ export default function Create() {
       <form onSubmit={handleSumbit}>
         <section>
           <input
-            id="name"
+            id="username"
             type="text"
             name="name"
             placeholder="Name"
