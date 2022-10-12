@@ -66,7 +66,7 @@ export default function ChatDisplay() {
         )
       )}
       <p className="chat-display-timestamp">
-        YOU MATCHED WITH ELLEN ON 10/13/22
+        YOU MATCHED WITH BEETLEGEUSE ON 10/13/22
       </p>
       <form className="msg-form">
         <input

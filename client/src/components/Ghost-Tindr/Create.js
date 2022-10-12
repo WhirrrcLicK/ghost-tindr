@@ -53,11 +53,12 @@ export default function Create() {
   return (
     <div className="create">
       <Header />
+      <div className="create_container">
       <p>Create Profile</p>
       <form onSubmit={handleSumbit}>
         <section>
           <input
-            id="name"
+            id="username"
             type="text"
             name="name"
             placeholder="Name"
@@ -159,6 +160,7 @@ export default function Create() {
           <input type="submit" />
         </section>
       </form>
+      </div>
     </div>
   );
 }

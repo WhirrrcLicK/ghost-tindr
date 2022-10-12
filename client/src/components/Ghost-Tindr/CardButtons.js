@@ -9,21 +9,21 @@ export default function CardButtons({ profileId }) {
       <a href={``}>
         <img
           src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%204.png?raw=true"
-          height="110"
+          height="130"
           className="like"
         />
       </a>
       <Link to={`/profile/${profileId}`}>
         <img
           src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%202.png?raw=true"
-          height="110"
+          height="130"
           className="profile"
         />
       </Link>
       <a href={``} className="dislike">
         <img
           src="https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%205.png?raw=true"
-          height="110"
+          height="130"
         />
       </a>
     </div>

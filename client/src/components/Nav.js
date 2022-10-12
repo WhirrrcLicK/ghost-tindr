@@ -34,8 +34,8 @@ export default function Nav({ minimal, setShowModal, showModal, setIsSignUp }) {
   const authToken = false;
 
   return (
-    <div className="loginForm">
-      <form>
+    <div className="login">
+      <form className="loginForm">
         <div className="input-container">
           <input
             type="text"
@@ -55,9 +55,7 @@ export default function Nav({ minimal, setShowModal, showModal, setIsSignUp }) {
           />
         </div>
         {!authToken && (
-          <div className="login">
             <button className="login-button" onClick={handleClick}>Login</button>
-          </div>
         )}
       </form>
     </div>

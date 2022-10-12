@@ -9,18 +9,17 @@ export default function ChatItem(props) {
   const [ghost, setGhost] = useState([]);
 
   const userId = cookies.UserId;
-
   return (
-    <Link to={`/chat/${props.ghost.name}`}>
+    <a href={`/chat/${props.ghost.name}`}>
       <div className="chat-item">
-        <div className="profile">
           <div className="img-container">
             <img src={props.ghost.url1} alt={"photo of " + props.ghost.name} />
           </div>
-          <p>{props.ghost.name}</p>
-          <p>{props.ghost.message1}</p>
+          <div className="user_message">
+          <p id="name">{props.ghost.name}</p>
+          <p id="message">{props.ghost.message1}</p>
         </div>
-      </div>
-    </Link>
+        </div>
+    </a>
   );
 }

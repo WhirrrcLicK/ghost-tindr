@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { useCookies } from "react-cookie";
+import "./home.scss"
 
 export default function AuthModal(props) {
   const [email, setEmail] = useState(null);
