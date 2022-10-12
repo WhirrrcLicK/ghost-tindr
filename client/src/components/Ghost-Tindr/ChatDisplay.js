@@ -26,8 +26,17 @@ export default function ChatDisplay() {
 
   const handleSend = (e) => {
     e.preventDefault();
+    const replyMessage = {
+      name: "Ghost 1",
+      image:
+        "https://as2.ftcdn.net/v2/jpg/04/54/73/29/1000_F_454732959_pjHIUTqFz68f2VxnJMKs4JrMaXuxVo6l.jpg",
+      message: "Hey",
+    };
     setMessages([...messages, { message: input }]);
     setInput("");
+    setTimeout(() => {
+      setMessages((prev) => [...prev, replyMessage]);
+    }, 4000);
   };
 
   return (
@@ -49,12 +58,14 @@ export default function ChatDisplay() {
             <img
               className="chat-display-image"
               alt={message.name}
-              src={"https://static.scientificamerican.com/sciam/cache/file/D3E36D4B-4DAC-41ED-9A090F94600ABDFE_source.jpg?w=390&h=520&33C2C20C-213F-4EC0-A493EF26CFD87E62"}
+              src={
+                "https://static.scientificamerican.com/sciam/cache/file/D3E36D4B-4DAC-41ED-9A090F94600ABDFE_source.jpg?w=390&h=520&33C2C20C-213F-4EC0-A493EF26CFD87E62"
+              }
             />
           </div>
         )
       )}
-            <p className="chat-display-timestamp">
+      <p className="chat-display-timestamp">
         YOU MATCHED WITH ELLEN ON 10/13/22
       </p>
       <form className="msg-form">
