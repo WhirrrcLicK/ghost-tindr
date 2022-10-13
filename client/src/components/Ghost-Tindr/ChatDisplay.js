@@ -33,7 +33,7 @@ export default function ChatDisplay() {
     setInput("");
     setTimeout(() => {
       setMessages((prev) => [...prev, replyMessage]);
-    }, 4000);
+    }, 6000);
   };
 
   return (
