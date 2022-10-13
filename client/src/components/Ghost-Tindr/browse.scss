@@ -41,7 +41,21 @@
 
 .swal-modal {
   background-color: #12090d;
-  filter: brightness(115%);
+  filter: brightness(120%);
+  height: 720px;
+  width: 480px;
+}
+
+.swal-icon img {
+  max-height: 1000px;
+  max-width: 1000px;
+  height: 625px;
+  width: 475px;
+}
+
+div.swal-footer {
+  padding:0;
+  margin:0;
 }
 
 .swal-button--confirm {
@@ -51,4 +65,5 @@
   border: none;
   width: 50px;
   color:#82773d;
+  margin: 0;
 }

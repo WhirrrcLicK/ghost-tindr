@@ -56,9 +56,6 @@ export default function TinderCards() {
       updateMatches(swipedUserId);
       swal({
         icon: 'https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%2012.png?raw=true',
-        imageWidth: 400,
-        imageHeight: 400,
-        imageAlt: 'Custom image',
       });
       console.log(`added to matches`);
     }
