@@ -11,6 +11,7 @@
   padding-top: 200px;
   padding-bottom: 20px;
   height: 100%;
+  filter: brightness(115%);
 }
 .chat-item {
   display: flex;
@@ -81,7 +82,7 @@ color: #82773d;
   padding-right: 20px;
   padding-top: 20px;
   color: #82773d;
-  margin-top: 90px;
+  margin-top: 115px;
 }
 
 .chat-display-image {
@@ -100,6 +101,7 @@ color: #82773d;
   margin-bottom: 155px;
   margin-left: 20%;
   margin-right: 20%;
+  filter: brightness(115%);
 }
 
 .chat-display-text {
@@ -108,6 +110,7 @@ color: #82773d;
   padding: 7px;
   border-radius: 10px;
   z-index: 99;
+  filter: brightness(115%);
 }
 
 .chat-display-message {
@@ -121,6 +124,7 @@ color: #82773d;
   background-color: #211319;
   padding: 7px;
   border-radius: 10px;
+  filter: brightness(115%);
 }
 
 .msg-form {
@@ -131,6 +135,7 @@ color: #82773d;
   bottom: 0;
   width: 100%;
   border-top: 6px dotted #211319;
+  filter: brightness(115%);
 }
 
 .msg-input {
@@ -155,5 +160,6 @@ color: #82773d;
   background: linear-gradient(180deg, rgba(78,74,58,1) 0%, rgba(43,41,56,1) 36%, rgba(28,27,38,1) 57%, rgba(14,14,12,1) 91%);
   font-weight: bolder;
   color: #4f4d45;
+  filter: brightness(115%);
 }
 

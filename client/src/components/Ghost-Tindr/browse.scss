@@ -1,11 +1,3 @@
-*{
-  box-sizing: border-box;
-}
-
-.body {
-  height: 100vh;
-}
-
 .browse {
   display:flex;
   flex-direction: column;
@@ -29,6 +21,7 @@
   background-size: cover;
   background-position: center;
   box-shadow: 0px 4px 10px 0px #211319;
+  filter: brightness(115%);
 }
 
 .cardinfo {
@@ -48,6 +41,7 @@
 
 .swal-modal {
   background-color: #12090d;
+  filter: brightness(115%);
 }
 
 .swal-button--confirm {
