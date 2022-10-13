@@ -55,7 +55,7 @@ export default function TinderCards() {
     if (direction === "right") {
       updateMatches(swipedUserId);
       swal({
-        icon: 'https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%2012.png?raw=true',
+        icon: 'https://github.com/WhirrrcLicK/ghost-tindr/blob/main/client/mockups/Untitled_Artwork%2015.png?raw=true',
       });
       console.log(`added to matches`);
     }
